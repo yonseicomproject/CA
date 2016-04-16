@@ -18,6 +18,10 @@ overall : atomic is faster than timing while running same instruction
 there are almost same instructions but tick and numCycle(and busy cycle) are dramatically high in /cpu_time : timing/
 atomic cpu time is using cpu more efficiently 
 
+Atomic CPU uses the latency estimates from the atomic accesses to estimate overall cache access time
+Timing CPU STALLS on cache accesses and waits for the memory system to respond prior to proceeding
+reference : http://www.gem5.org/SimpleCPU
+
 ## basicmath case
 
 --- basicmath_arm_atomic_stats.txt	2016-04-16 14:13:41.299220620 +0900
