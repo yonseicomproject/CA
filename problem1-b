@@ -1,0 +1,119 @@
+Important Metrics
+sim_ticks 	Number of ticks simulated 
+sim_insts 	Number of instructions simulated 
+system.cpu.numCycles 	Number of cpu cycles simulated 
+system.cpu.num_int_alu_accesses 	Number of integer alu accesses 
+system.cpu.num_func_calls 	Number of times a function call or return occurred 
+system.cpu.num_conditional_control_insts 	Number of instructions that are conditional controls 
+system.cpu.num_int_insts 	Number of integer instructions 
+system.cpu.num_int_register_reads 	Number of times the integer registers were read 
+system.cpu.num_int_register_writes 	Number of times the integer registers were written 
+system.cpu.num_mem_refs 	Number of memory refs 
+system.cpu.num_load_insts 	Number of load instructions 
+system.cpu.num_store_insts 	Number of store instructions 
+system.cpu.num_idle_cycles 	Number of idle cycles 
+system.cpu.num_busy_cycles 	Number of busy cycles 
+
+
+
+## Dijkstra atomic/timing
+-sim_ticks                                104989821000                       # Number of ticks simulated
++sim_ticks                                12866275048000                       # Number of ticks simulated
+
+-sim_insts                                   198192763                       # Number of instructions simulated
++sim_insts                                   197694535                       # Number of instructions simulated
+
+-system.cpu.numCycles                        209979643                       # number of cpu cycles simulated
++system.cpu.numCycles                      25732550096                       # number of cpu cycles simulated
+
+system.cpu.num_int_alu_accesses             164799450                       # Number of integer alu accesses
+
+system.cpu.num_func_calls                     1383011                       # number of times a function call or return occured
+
+system.cpu.num_conditional_control_insts     44442530                       # number of instructions that are conditional controls
+
+system.cpu.num_int_insts                    164799450                       # number of integer instructions
+
+-system.cpu.num_int_register_reads           285791204                       # number of times the integer registers were read
++system.cpu.num_int_register_reads           285363777                       # number of times the integer registers were read
+
+system.cpu.num_int_register_writes           98209738                       # number of times the integer registers were written
+
+system.cpu.num_mem_refs                      67624803                       # number of memory refs
+
+system.cpu.num_load_insts                    47136376                       # Number of load instructions
+
+system.cpu.num_store_insts                   20488427                       # Number of store instructions
+
+system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+
+-system.cpu.num_busy_cycles               209979642.998000                       # Number of busy cycles
++system.cpu.num_busy_cycles               25732550095.998001                       # Number of busy cycles
+
+
+
+
+
+
+
+## shao0 / shao3
+-sim_ticks                                187669619000                       # Number of ticks simulated
++sim_ticks                                 56030742500                       # Number of ticks simulated
+
+-sim_insts                                   372981337                       # Number of instructions simulated
++sim_insts                                   105239667                       # Number of instructions simulated
+
+-system.cpu.numCycles                        375339239                       # number of cpu cycles simulated
++system.cpu.numCycles                        112061486                       # number of cpu cycles simulated
+
+-system.cpu.num_int_alu_accesses             365223675                       # Number of integer alu accesses
++system.cpu.num_int_alu_accesses             106259554                       # Number of integer alu accesses
+
+-system.cpu.num_func_calls                      312487                       # number of times a function call or return occured
++system.cpu.num_func_calls                      210203                       # number of times a function call or return occured
+
+-system.cpu.num_conditional_control_insts      9759028                       # number of instructions that are conditional controls
++system.cpu.num_conditional_control_insts      5597627                       # number of instructions that are conditional controls
+
+-system.cpu.num_int_insts                    365223675                       # number of integer instructions
++system.cpu.num_int_insts                    106259554                       # number of integer instructions
+
+-system.cpu.num_int_register_reads           660941015                       # number of times the integer registers were read
++system.cpu.num_int_register_reads           182698958                       # number of times the integer registers were read
+
+-system.cpu.num_int_register_writes          308453679                       # number of times the integer registers were written
++system.cpu.num_int_register_writes           91862390                       # number of times the integer registers were written
+ 
+-system.cpu.num_mem_refs                     192829203                       # number of memory refs
++system.cpu.num_mem_refs                      29726056                       # number of memory refs
+
+-system.cpu.num_load_insts                   145412450                       # Number of load instructions
++system.cpu.num_load_insts                    20267795                       # Number of load instructions
+
+-system.cpu.num_store_insts                   47416753                       # Number of store instructions
++system.cpu.num_store_insts                    9458261                       # Number of store instructions
+
+
+
+ system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+-system.cpu.num_busy_cycles               375339238.998000                       # Number of busy cycles
++system.cpu.num_busy_cycles               112061485.998000                       # Number of busy cycles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
