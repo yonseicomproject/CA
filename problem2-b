@@ -30,6 +30,11 @@ system.cpu.num_store_insts                : no unrolling > unrolling
 system.cpu.num_idle_cycles                : no difference
 system.cpu.num_busy_cycles                : no unrolling > unrolling
 
+## explain effects of unrolling technique and compiler optimization on data hazards and control hazards.
+o0 doesn't optimize the code. o3 reduce code size, execution time and optimize many things such as inline function and register.  It minimize data dependencies.
+loop unrolling reduces the frequency of loop branches. It minimize control dependencies.
+
+
 ##
 ## shao0 / shao3
 ##
