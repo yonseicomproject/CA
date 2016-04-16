@@ -12,9 +12,10 @@ system.cpu.num_mem_refs     Number of memory refs     :no difference
 system.cpu.num_load_insts   Number of load instructions         : no difference
 system.cpu.num_store_insts  Number of store instructions        : no difference
 system.cpu.num_idle_cycles  Number of idle cycles               : no difference
-
 system.cpu.num_busy_cycles  Number of busy cycles               : atomic < timing 
 
+Overall : atomic is faster than timing while running same instruction
+there are almost same instructions but 
 
 
 ## Dijkstra atomic/timing
