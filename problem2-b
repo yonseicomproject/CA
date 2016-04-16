@@ -1,0 +1,49 @@
+##
+## shao0 / shao3
+##
+--- sha_o0_arm_stats.txt	2016-04-16 12:44:35.467078892 +0900
++++ sha_o3_arm_stats.txt	2016-04-16 12:47:20.927086782 +0900
+@@ -1,40 +1,40 @@
+ 
+ ---------- Begin Simulation Statistics ----------
+-sim_ticks                                187669619000                       # Number of ticks simulated
++sim_ticks                                 56030742500                       # Number of ticks simulated
+
+-sim_insts                                   372981337                       # Number of instructions simulated
++sim_insts                                   105239667                       # Number of instructions simulated
+
+-system.cpu.numCycles                        375339239                       # number of cpu cycles simulated
++system.cpu.numCycles                        112061486                       # number of cpu cycles simulated
+
+-system.cpu.num_int_alu_accesses             365223675                       # Number of integer alu accesses
++system.cpu.num_int_alu_accesses             106259554                       # Number of integer alu accesses
+
+-system.cpu.num_func_calls                      312487                       # number of times a function call or return occured
++system.cpu.num_func_calls                      210203                       # number of times a function call or return occured
+
+-system.cpu.num_conditional_control_insts      9759028                       # number of instructions that are conditional controls
++system.cpu.num_conditional_control_insts      5597627                       # number of instructions that are conditional controls
+
+-system.cpu.num_int_insts                    365223675                       # number of integer instructions
++system.cpu.num_int_insts                    106259554                       # number of integer instructions
+
+-system.cpu.num_int_register_reads           660941015                       # number of times the integer registers were read
++system.cpu.num_int_register_reads           182698958                       # number of times the integer registers were read
+
+-system.cpu.num_int_register_writes          308453679                       # number of times the integer registers were written
++system.cpu.num_int_register_writes           91862390                       # number of times the integer registers were written
+ 
+-system.cpu.num_mem_refs                     192829203                       # number of memory refs
++system.cpu.num_mem_refs                      29726056                       # number of memory refs
+
+-system.cpu.num_load_insts                   145412450                       # Number of load instructions
++system.cpu.num_load_insts                    20267795                       # Number of load instructions
+
+-system.cpu.num_store_insts                   47416753                       # Number of store instructions
++system.cpu.num_store_insts                    9458261                       # Number of store instructions
+
+ system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+
+-system.cpu.num_busy_cycles               375339238.998000                       # Number of busy cycles
++system.cpu.num_busy_cycles               112061485.998000                       # Number of busy cycles
+ ---------- End Simulation Statistics   ----------
