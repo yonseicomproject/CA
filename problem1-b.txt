@@ -1,21 +1,22 @@
 Important Metrics
-sim_ticks   Number of ticks simulated       :   atomic < timing 
-sim_insts   Number of instructions simulated :  atomic > timing (little bit bigger)
+sim_ticks   Number of ticks simulated       :   atomic <<<<< timing 
+sim_insts   Number of instructions simulated :  atomic >= timing (little bit bigger, almost same)
 system.cpu.numCycles    Number of cpu cycles simulated      :  atomic < timing 
 system.cpu.num_int_alu_accesses     Number of integer alu accesse     : no difference 
 system.cpu.num_func_calls   Number of times a function call or return occurred      : no difference
 system.cpu.num_conditional_control_insts    Number of instructions that are conditional controls    :no difference 
 system.cpu.num_int_insts    Number of integer instruction     : no differnce
-system.cpu.num_int_register_reads   Number of times the integer registers were read 
+system.cpu.num_int_register_reads   Number of times the integer registers were read     : atomic >= timing (little bit bigger, almost same)
 system.cpu.num_int_register_writes  Number of times the integer registers were writte     : no difference
 system.cpu.num_mem_refs     Number of memory refs     :no difference
 system.cpu.num_load_insts   Number of load instructions         : no difference
 system.cpu.num_store_insts  Number of store instructions        : no difference
 system.cpu.num_idle_cycles  Number of idle cycles               : no difference
-system.cpu.num_busy_cycles  Number of busy cycles               : atomic < timing 
+system.cpu.num_busy_cycles  Number of busy cycles               : atomic <<<<< timing 
 
-Overall : atomic is faster than timing while running same instruction
-there are almost same instructions but 
+overall : atomic is faster than timing while running same instruction
+there are almost same instructions but tick and numCycle(and busy cycle) are dramatically high in timing CPU time
+atomic cpu time is using cpu more efficiently 
 
 
 ## Dijkstra atomic/timing
