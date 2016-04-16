@@ -1,0 +1,128 @@
+Important Metrics
+sim_ticks   Number of ticks simulated       :   atomic <<<<< timing 
+sim_insts   Number of instructions simulated :  atomic >= timing (little bit bigger, almost same)
+system.cpu.numCycles    Number of cpu cycles simulated      :  atomic < timing 
+system.cpu.num_int_alu_accesses     Number of integer alu accesse     : no difference 
+system.cpu.num_func_calls   Number of times a function call or return occurred      : no difference
+system.cpu.num_conditional_control_insts    Number of instructions that are conditional controls    :no difference 
+system.cpu.num_int_insts    Number of integer instruction     : no differnce
+system.cpu.num_int_register_reads   Number of times the integer registers were read     : atomic >= timing (little bit bigger, almost same)
+system.cpu.num_int_register_writes  Number of times the integer registers were writte     : no difference
+system.cpu.num_mem_refs     Number of memory refs     :no difference
+system.cpu.num_load_insts   Number of load instructions         : no difference
+system.cpu.num_store_insts  Number of store instructions        : no difference
+system.cpu.num_idle_cycles  Number of idle cycles               : no difference (just little bit different in basicamth)
+system.cpu.num_busy_cycles  Number of busy cycles               : atomic <<<<< timing 
+
+overall : atomic is faster than timing while running same instruction
+there are almost same instructions but tick and numCycle(and busy cycle) are dramatically high in timing CPU time
+atomic cpu time is using cpu more efficiently 
+
+## basicmath case
+
+--- basicmath_arm_atomic_stats.txt	2016-04-16 14:13:41.299220620 +0900
++++ basicmath_arm_timing_stats.txt	2016-04-16 12:41:36.216640239 +0900
+@@ -1,16 +1,16 @@
+ 
+ ---------- Begin Simulation Statistics ----------
+-sim_ticks                                1873594805000                       # Number of ticks simulated
++sim_ticks                                198870536359000                       # Number of ticks simulated
+-sim_insts                                  3247267303                       # Number of instructions simulated
++sim_insts                                  3215786887                       # Number of instructions simulated
+-system.cpu.numCycles                       3747189611                       # number of cpu cycles simulated
++system.cpu.numCycles                     397741072718                       # number of cpu cycles simulated
+ system.cpu.num_int_alu_accesses            3313864595                       # Number of integer alu accesses
+ system.cpu.num_func_calls                   145903680                       # number of times a function call or return occured
+ system.cpu.num_conditional_control_insts    424791249                       # number of instructions that are conditional controls
+ system.cpu.num_int_insts                   3313864595                       # number of integer instructions
+-system.cpu.num_int_register_reads          5255137124                       # number of times the integer registers were read
++system.cpu.num_int_register_reads          5235280932                       # number of times the integer registers were read
+ system.cpu.num_int_register_writes         2286830114                       # number of times the integer registers were written
+ system.cpu.num_mem_refs                     973935801                       # number of memory refs
+ system.cpu.num_load_insts                   535597987                       # Number of load instructions
+ system.cpu.num_store_insts                  438337814                       # Number of store instructions
+-system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+-system.cpu.num_busy_cycles               3747189610.998000                       # Number of busy cycles
++system.cpu.num_idle_cycles                   0.001987                       # Number of idle cycles
++system.cpu.num_busy_cycles               397741072717.997986                       # Number of busy cycles
+
+ ---------- End Simulation Statistics   ----------
+
+## Dijkstra atomic/timing case
+
+-sim_ticks                                104989821000                       # Number of ticks simulated
++sim_ticks                                12866275048000                       # Number of ticks simulated
+-sim_insts                                   198192763                       # Number of instructions simulated
++sim_insts                                   197694535                       # Number of instructions simulated
+-system.cpu.numCycles                        209979643                       # number of cpu cycles simulated
++system.cpu.numCycles                      25732550096                       # number of cpu cycles simulated
+system.cpu.num_int_alu_accesses             164799450                       # Number of integer alu accesses
+system.cpu.num_func_calls                     1383011                       # number of times a function call or return occured
+system.cpu.num_conditional_control_insts     44442530                       # number of instructions that are conditional controls
+system.cpu.num_int_insts                    164799450                       # number of integer instructions
+-system.cpu.num_int_register_reads           285791204                       # number of times the integer registers were read
++system.cpu.num_int_register_reads           285363777                       # number of times the integer registers were read
+system.cpu.num_int_register_writes           98209738                       # number of times the integer registers were written
+system.cpu.num_mem_refs                      67624803                       # number of memory refs
+system.cpu.num_load_insts                    47136376                       # Number of load instructions
+system.cpu.num_store_insts                   20488427                       # Number of store instructions
+system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+-system.cpu.num_busy_cycles               209979642.998000                       # Number of busy cycles
++system.cpu.num_busy_cycles               25732550095.998001                       # Number of busy cycles
+
+fft input 099+092 = 191
+--- fft_arm_atomic_stats.txt	2017-04-16 12:37:26.000000000 +0900
++++ fft_arm_timing_stats.txt	2016-04-16 12:39:26.000000000 +0900
+@@ -1,16 +1,16 @@
+ 
+ ---------- Begin Simulation Statistics ----------
+-sim_ticks                                 21899768000                       # Number of ticks simulated
++sim_ticks                                2149562260000                       # Number of ticks simulated
+-sim_insts                                    38084386                       # Number of instructions simulated
++sim_insts                                    38032104                       # Number of instructions simulated
+-system.cpu.numCycles                         43799537                       # number of cpu cycles simulated
++system.cpu.numCycles                       4299124520                       # number of cpu cycles simulated
+ system.cpu.num_int_alu_accesses              39253508                       # Number of integer alu accesses
+ system.cpu.num_func_calls                     2344236                       # number of times a function call or return occured
+ system.cpu.num_conditional_control_insts      4922713                       # number of instructions that are conditional controls
+ system.cpu.num_int_insts                     39253508                       # number of integer instructions
+-system.cpu.num_int_register_reads            58540320                       # number of times the integer registers were read
++system.cpu.num_int_register_reads            57907488                       # number of times the integer registers were read
+ system.cpu.num_int_register_writes           29452674                       # number of times the integer registers were written
+system.cpu.num_mem_refs                       6213254                       # number of memory refs
+ system.cpu.num_load_insts                     3229772                       # Number of load instructions
+ system.cpu.num_store_insts                    2983482                       # Number of store instructions
+ system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+-system.cpu.num_busy_cycles               43799536.998000                       # Number of busy cycles
++system.cpu.num_busy_cycles               4299124519.998000                       # Number of busy cycles
+ 
+ ---------- End Simulation Statistics   ---------
+ 
+ 
+--- basicmath_arm_atomic_stats.txt	2016-04-16 14:13:41.299220620 +0900
++++ basicmath_arm_timing_stats.txt	2016-04-16 12:41:36.216640239 +0900
+@@ -1,16 +1,16 @@
+ 
+ ---------- Begin Simulation Statistics ----------
+-sim_ticks                                1873594805000                       # Number of ticks simulated
++sim_ticks                                198870536359000                       # Number of ticks simulated
+-sim_insts                                  3247267303                       # Number of instructions simulated
++sim_insts                                  3215786887                       # Number of instructions simulated
+-system.cpu.numCycles                       3747189611                       # number of cpu cycles simulated
++system.cpu.numCycles                     397741072718                       # number of cpu cycles simulated
+ system.cpu.num_int_alu_accesses            3313864595                       # Number of integer alu accesses
+ system.cpu.num_func_calls                   145903680                       # number of times a function call or return occured
+ system.cpu.num_conditional_control_insts    424791249                       # number of instructions that are conditional controls
+ system.cpu.num_int_insts                   3313864595                       # number of integer instructions
+-system.cpu.num_int_register_reads          5255137124                       # number of times the integer registers were read
++system.cpu.num_int_register_reads          5235280932                       # number of times the integer registers were read
+ system.cpu.num_int_register_writes         2286830114                       # number of times the integer registers were written
+ system.cpu.num_mem_refs                     973935801                       # number of memory refs
+ system.cpu.num_load_insts                   535597987                       # Number of load instructions
+ system.cpu.num_store_insts                  438337814                       # Number of store instructions
+-system.cpu.num_idle_cycles                   0.002000                       # Number of idle cycles
+-system.cpu.num_busy_cycles               3747189610.998000                       # Number of busy cycles
++system.cpu.num_idle_cycles                   0.001987                       # Number of idle cycles
++system.cpu.num_busy_cycles               397741072717.997986                       # Number of busy cycles
+
+ ---------- End Simulation Statistics   ----------
