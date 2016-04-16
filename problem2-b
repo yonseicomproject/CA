@@ -19,7 +19,7 @@ sim_ticks                                 : no unrolling > unrolling
 sim_insts                                 : no unrolling > unrolling
 system.cpu.numCycles                      : no unrolling > unrolling
 system.cpu.num_int_alu_accesses           : no unrolling > unrolling
-system.cpu.num_func_calls                 : no difference
+system.cpu.num_func_calls                 : no difference(only 2 func calls more than unrolling)
 system.cpu.num_conditional_control_insts  : no unrolling > unrolling
 system.cpu.num_int_insts                  : no unrolling > unrolling
 system.cpu.num_int_register_reads         : no unrolling > unrolling
