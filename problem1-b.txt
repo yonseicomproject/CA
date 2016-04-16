@@ -15,7 +15,7 @@ system.cpu.num_idle_cycles  Number of idle cycles               : no difference 
 system.cpu.num_busy_cycles  Number of busy cycles               : atomic <<<<< timing 
 
 overall : atomic is faster than timing while running same instruction
-there are almost same instructions but tick and numCycle(and busy cycle) are dramatically high in timing CPU time
+there are almost same instructions but tick and numCycle(and busy cycle) are dramatically high in cpu time
 atomic cpu time is using cpu more efficiently 
 
 ## basicmath case
