@@ -16,15 +16,6 @@ CacheBlk*
 FIFO::accessBlock(Addr addr, bool is_secure, Cycles &lat, int master_id)
 {
     CacheBlk *blk = BaseSetAssoc::accessBlock(addr, is_secure, lat, master_id);
-
-    if (blk != NULL) {
-        // move this block to head of the MRU list
-        sets[blk->set].moveToHead(blk);
-        DPRINTF(CacheRepl, "set %x: moving blk %x (%s) to head\n",
-                blk->set, regenerateBlkAddr(blk->tag, blk->set),
-                is_secure ? "s" : "ns");
-    }
-
     return blk;
 }
 
